@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    background-image: url("https://www.99images.com/photos/wallpapers/3d-abstract/pink-aesthetic-tumblr-laptopandroid-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-bt3ej.jpg?v=1577317959");
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+li {
+    list-style-type: none;
+}
+  
+a {
+    text-decoration: none;
+}
+
+.title {
+    margin: 50px;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    margin-right: 10px;
+    font-size: 150px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Arial;
+    text-shadow: 4px 4px brown;
+    color: pink;
+}
+
+.link {
+    padding: 200px;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 4px 4px pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -17,6 +17,7 @@ class Cart extends Component {
     }
 
     fetchCartPerfume = () => {
+        console.log("pop")
         fetch("https://fragbackend.herokuapp.com/Mens/Cart", {
             headers: {
                 Accept: "application/json",
@@ -24,45 +25,46 @@ class Cart extends Component {
         })
             .then((res) => res.json())
             .then((out) => this.setState({ perfume: out }));
-            
+
     };
 
-    fragApp = (e) => {
-        e.preventDefault();
+    fragAdd = () => {
+        console.log("added")
         fetch("https://fragbackend.herokuapp.com/Mens/Cart", {
             method: "POST",
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ perfume: this.state.perfume, "status": true }),
+            body: JSON.stringify({ perfume: this.state.perfume }),
         })
             .then((res) => res.json())
             .then((out) => this.fetchCartPerfume());
     };
 
-    fragMens = (e) => {
-        this.setState({
-            perfume: e.target.value,
-        });
-        console.log(e.target.value);
-    };
+    // fragAll = (e) => {
 
-    fragUpdate = (_id, e) => {
-        fetch("https://fragbackend.herokuapp.com/Mens/Cart/" + _id, {
-            method: "PUT",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ perfume: this.state.perfume, "status": false }),
-        })
-            .then((res) => res.json())
-            .then((out) => this.fetchCartPerfume());
-    };
+    //     this.setState({
+    //         perfume: e.target.value,
+    //     });
+    //     console.log(e.target.value);
+    // };
 
-    fragDelete = (_id, e) => {
-        console.log(_id);
+    // fragUpdate = (_id, e) => {
+    //     fetch("https://fragbackend.herokuapp.com/Mens/Cart/" + _id, {
+    //         method: "PUT",
+    //         headers: {
+    //             Accept: "application/json",
+    //             "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify({ perfume: this.state.perfume, "status": false }),
+    //     })
+    //         .then((res) => res.json())
+    //         .then((out) => this.fetchCartPerfume());
+    // };
+
+    fragDelete = (_id) => {
+        console.log("deleted");
         fetch("https://fragbackend.herokuapp.com/Mens/Cart/" + _id, {
             method: "DELETE",
             headers: {
@@ -73,6 +75,10 @@ class Cart extends Component {
             .then((res) => res.json())
             .then((out) => this.fetchCartPerfume());
     };
+// handleClick = () => {
+//     console.log("new")
+// }
+
 
     render() {
         console.log(this.state.perfume);
@@ -92,23 +98,36 @@ class Cart extends Component {
 
                     <div className="cart">
                         <p className="added">Add To Basket</p>
-                        <form>
-                            <div>
+
+                        <div>
                             <div className="grid2">
-            {this.state.perfume.length !==0
-            ?this.state.perfume.map((womens) =>(
-                <p>
-                    {womens.perfume}
-                </p>
-                  
-            ))
-        : null}
-        </div>
-                                <button onClick={this.fragMens}>EDIT</button>
-                                <button onClick={this.fragMens}>DELETE</button>      
-                                </div>
-                            </form>
+
+                                {this.state.perfume.length !== 0
+                                    ? this.state.perfume.map((womens, mens) => (
+
+                                        <p>
+                                            <div className="prod">
+                                                <img src={womens.image_url} />
+                                                <p>{womens.name}</p>
+                                                <p>${womens.price}</p>
+                                                <p>{mens.image_url}</p>
+                                                <p>{mens.name}</p>
+                                                <p>{mens.price}</p>
+                                            </div>
+                                            <button onClick={this.fragUpdate}>EDIT</button>
+                                            <button onClick={() => this.fragDelete(womens._id)}>DELETE</button>
+                                            <button onClick={() => this.fragAdd(womens)}> NEW </button>
+                                        </p>
+
+                                    ))
+                                    : null}
+                                    
+                            </div>
+                            
+
                         </div>
+
+                    </div>
                     <Footer />
                 </div>
             </body>

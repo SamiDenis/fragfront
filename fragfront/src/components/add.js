@@ -14,7 +14,7 @@ handleAdd = ()=> {
                 Accept: "application/json",
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ perfume: "test1", status: true})
+            body: JSON.stringify({ image_url: this.props.pic, name: this.props.name, price: this.props.price })
         })
             .then((res) => res.json())
             .then((out) => console.log(out));

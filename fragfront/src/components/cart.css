@@ -11,7 +11,7 @@
 }
 
 .last{
-    padding-bottom: 200px;
+    padding-bottom: 50px;
     height: 100%;
     width: 100%;
 }
@@ -48,7 +48,7 @@ label{
 }
 
 .cart{
-    border: 3px solid white;
+
   width: 50vw;
   height: 60vh;
   margin-left: auto;
@@ -57,4 +57,8 @@ label{
   background-color: black;
   color: red;
   text-align: center;
+}
+
+.prod{
+    font-weight: bold;
 }

@@ -1,8 +1,11 @@
-body {
+.back{
     margin: 0;
-    background-image: url("https://www.99images.com/photos/wallpapers/3d-abstract/pink-aesthetic-tumblr-laptopandroid-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-bt3ej.jpg?v=1577317959");
-    background-repeat: no-repeat; 
+    background-image: url("https://libreshot.com/wp-content/uploads/2016/04/parfum-1.jpg");
     background-size: cover;
+}
+
+.back{
+    background-color: pink;
 }
 
 li {
@@ -18,16 +21,31 @@ a {
     padding-top: 200px;
     padding-bottom: 100px;
     margin-right: 10px;
-    font-size: 150px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Arial;
-    text-shadow: 4px 4px brown;
-    color: pink;
+    font-size: 170px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 8px 8px #A47234;
+    color: white;
 }
 
 .link {
     padding: 200px;
-    font-size: 50px;
+    font-size: 70px;
     font-weight: bold;
-    text-shadow: 4px 4px pink;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 4px 4px #A47234;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.photo{
+    height: 100%;
+    width: 100%;
+    padding-bottom: 200px;
+}
+
+h3{
+   color: #A47234;
+   font-size: 16px;
+   font-family: 'Times New Roman', Times, serif;
+   padding-top: 300px;
+   padding-bottom: 20px;
 }

@@ -1,49 +1,57 @@
 import React, { Component } from "react";
 import "./mens.css";
+import Footer from "./footer.js";
+import Add from "./add.js";
 
 class Mens extends Component {
-    constructor(props) {
-        super();
-    }
+  constructor(props) {
+    super();
+  }
 
-    render() {
-        return (
-            <div className="one">
-                 <a href="/fragfront/" className="next">
-            <div className="mensTitle">Dream of Fragrance</div>
-          </a>
-                <a href="/Mens" className="next">
-              Mens
+  render() {
+    return (
+      <body className="first">
+      <div className="one">
+        <a href="/fragfront/" className="next">
+          <div className="mensTitle">Dream of Fragrance</div>
+        </a>
+        <a href="/Mens" className="next">
+          Mens
             </a>
-          
-            <a href="/Womens" className="next">
-              Womens
+
+        <a href="/Womens" className="next">
+          Womens
             </a>
-          
-            <a href="/Mens/Cart" className="next">
-              Cart
+
+        <a href="/Mens/Cart" className="next">
+          Cart
             </a>
-                <p></p>
-                {this.props.data.length !==0
-                ? this.props.data.map((mens) => (
-                    <div className="two">
-                        <div className="bord">
-                        <img src={mens.image_url} />
-                        <p>{mens.name}</p>
-                        <p>{mens.brand}</p>
-                        <p>{mens.type}</p>
-                        <p>$ {mens.price}</p>
-                        {/* <p className="frag">{mens.family}</p>
+
+        <img src="https://cdn.shopify.com/s/files/1/1397/9545/collections/menbanner3_d41072cb-e054-40c8-96a6-ca20dafa898a.jpg?v=1475332146" className="pic" />
+<div className="grid">
+        {this.props.data.length !== 0
+          ? this.props.data.map((mens) => (
+            <h1 className="containerss">
+              <div className="rowss">
+                <img src={mens.image_url} />
+                <p className="col">{mens.name}</p>
+                <p className="col">{mens.brand}</p>
+                <p className="col">{mens.type}</p>
+                <p className="col"> USD ${mens.price}</p>
+                {/* <p className="frag">{mens.family}</p>
                         <p className="frag">{mens.notes}</p> */}
-                    </div>
-                </div>
-                ))
-            : null}
-            </div>
-            
-        );
-        // <button onClick>Add to Cart</button>
-    }
+                <Add />
+              </div>
+            </h1>
+          ))
+          : null}
+          </div>
+        <Footer />
+      </div>
+</body>
+    );
+  }
 }
+
 
 export default Mens;

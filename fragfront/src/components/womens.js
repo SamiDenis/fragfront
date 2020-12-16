@@ -1,9 +1,13 @@
 import React from "react";
 import "./womens.css";
+// import {} from "react-bootstrap";
+import Footer from "./footer.js"
+import Add from "./add.js";
 
 let Womens = (props) => {
-    console.log(props);
+    
     return (
+      <body className="wo">
         <div className="card">
              <a href="/fragfront/" className="turn">
             <div className="womensTitle">Dream of Fragrance</div>
@@ -19,22 +23,30 @@ let Womens = (props) => {
             <a href="/Mens/Cart" className="turn">
               Cart
             </a>
+
+            <img src="https://www.estorepower.com/estore/ehsence/store/images/banner2.jpg" className="pic"/>
+
+            <div className="grid2">
             {props.data.length !==0
             ?props.data.map((womens) =>(
-                <h1 className="Womens">
-                    <div className="border">
+                <h1 className="container">
+                    <div className="row">
                     <img src={womens.image_url} />
-                        <p className="frag">{womens.name}</p>
-                        <p className="frag">{womens.brand}</p>
-                        <p className="frag">{womens.type}</p>
-                        <p className="frag">$ {womens.price}</p>
-                        {/* <p className="frag">{womens.family}</p>
-                        <p className="frag">{womens.notes}</p> */}
+                        <p className="col">{womens.name}</p>
+                        <p className="col">{womens.brand}</p>
+                        <p className="col">{womens.type}</p>
+                        <p className="col">USD ${womens.price}</p>
+                        {/* <p className="col">{womens.family}</p>
+                        <p className="col">{womens.notes}</p> */}
+                        <Add />
                     </div>
                 </h1>
             ))
         : null}
         </div>
+        <Footer />
+        </div>
+        </body>
     );
 };
 

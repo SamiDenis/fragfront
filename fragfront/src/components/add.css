@@ -1,0 +1,8 @@
+button{
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px brown;
+    font-size: 16px;
+    margin-top: 30px;
+}

@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
+// import logo from "../components/images/Dream.png";
 
 function Header(props) {
 
  
   return (
+    <body className="back">
     <div>
       <nav>
         <div className="front">
@@ -13,6 +15,8 @@ function Header(props) {
             <div className="title">Dream of Fragrance</div>
           </Link>
         </div>
+
+        
             <a href="/Mens" className="link">
               Mens
             </a>
@@ -20,14 +24,12 @@ function Header(props) {
             <a href="/Womens" className="link">
               Womens
             </a>
-          
-            {/* <Link to="/Mens/Cart" className="link">
-              Cart
-            </Link> */}
+           
         
-        
+            <h3>Sami Denis ©2020</h3>
       </nav>
     </div>
+    </body>
   );
 }
 

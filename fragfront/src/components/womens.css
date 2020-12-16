@@ -1,31 +1,56 @@
+.wo{
+    background-color: black;
+}
+
 .womensTitle{
     margin: 10px;
-    padding-top: 100px;
     font-size: 50px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Arial;
+    font-family: 'Times New Roman', Times, serif;
     text-shadow: 4px 4px brown;
-    color: pink;
+    color: white;
+}
+
+.container{
+    /* display: flex;  */
+    justify-content: center;
+    padding: 70px;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    
 }
 
 .turn{
     margin: 20px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
-    text-shadow: 4px 4px pink;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 4px 4px red;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.border{
+.row{
     font-size: 20px;
     padding-bottom: 20px;
     color: pink;
     font-weight: bold;
-    text-shadow: 2px 2px brown;
     border: 8px double white;
+    font-family: 'Times New Roman', Times, serif;
+    
+    
+}
+
+.grid2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 img{
-    height: 200px;
-    width: 200px;
-    padding-top: 100px;
+    height: 250px;
+    width: 250px;
+    padding-top: 50px;
+}
+
+.pic{
+    height: 100%;
+    width: 100%;
 }

@@ -9,8 +9,8 @@ import './App.css';
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       all: null,
       mensInfo: [],
@@ -35,15 +35,19 @@ class App extends Component {
     })
       .then((res) => res.json())
       .then((data) => this.setState({ womensInfo: data }));
+  
 
+    // this.pullFrag();
+    // pullFrag = () => {
       fetch("https://fragbackend.herokuapp.com/Mens/Cart", {
       headers: {
         Accept: "application/json",
       },
     })
       .then((res) => res.json())
-      .then((data) => this.setState({ cartInfo: data }));
+      .then((data) => this.setState({ perfume: data.perfume }));
   }
+
   
 
   
@@ -56,7 +60,9 @@ class App extends Component {
       <div className="App">
         <div>
           <BrowserRouter>
+          <Route exact path="/fragfront">
             <Header />
+            </Route>
             <Switch>
               <Route exact path="/Mens">
                 <Mens data={this.state.mensInfo} />
@@ -67,9 +73,10 @@ class App extends Component {
               <Route exact path="/Mens/Cart">
                 {/* {this.state.all ? ( */}
                   <Cart 
-                  data={this.state.cartInfo}
-                  mens={this.state.mensInfo}
-                  womens={this.state.womensInfo}
+                  // data={this.state.cartInfo}
+                  // mens={this.state.mensInfo}
+                  // womens={this.state.womensInfo}
+                  // pullFrag={this.pullFrag}
                   />
               </Route>
             </Switch>

@@ -1,0 +1,8 @@
+.apps{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    padding-bottom: 200px;
+    height: 50px;;
+    width: auto;
+}

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+// import React from "react";
 import "./cart.css";
+import Footer from "./footer.js"
 
 class Cart extends Component {
     constructor(props) {
@@ -74,37 +76,31 @@ class Cart extends Component {
     render() {
         console.log(this.state.perfume);
         return (
-            <div>
-                <div className="cart">
-                    <p>Add To Cart</p>
-                    <form>
-                        <label>
-                            Select Item(s)
-                              <input type="words" onChange={this.fragMens} name="name" />
-                        </label>
-                        <div>
-                            <button onClick={this.fragMens}></button>
-                        </div>
-                    </form>
-                </div>
+            <body class="final">
+                <div className="top">
+                    <a href="/fragfront/" className="next">
+                        <div className="cartTitle">Dream of Fragrance</div>
+                    </a>
+                    <a href="/Mens" className="page">Mens</a>
 
-                <div className="basket">
-                    <h1>Cart Filled</h1>
-                    <div className="basketinfo">
-                        {this.state.perfume.length !== 0
-                            ? this.state.perfume.map((basket) => (
-                                <div className="add">
-                                    {basket.name}
-                                    <button onClick={(e) => this.fragUpdate(basket._id, e)}>
-                                    </button>
-                                    <button onClick={(e) => this.fragDelete(basket._id, e)}>
-                                    </button>
+                    <a href="/Womens" className="page">Womens</a>
+
+                    <a href="/Mens/Cart" className="page">Cart</a>
+
+                    <img src="https://luxurycandlesupplies.com.au/wp-content/uploads/2018/08/lcs-banner-fragrance-101.jpg" className="last" />
+
+                    <div className="cart">
+                        <p className="added">Add To Basket</p>
+                        <form>
+                            <div>
+                                <button onClick={this.fragMens}>EDIT</button>
+                                <button onClick={this.fragMens}>DELETE</button>      
                                 </div>
-                            ))
-                            : null}
-                    </div>
+                            </form>
+                        </div>
+                    <Footer />
                 </div>
-            </div>
+            </body>
         );
     }
 }

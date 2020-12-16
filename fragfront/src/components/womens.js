@@ -38,7 +38,10 @@ let Womens = (props) => {
                         <p className="col">USD ${womens.price}</p>
                         {/* <p className="col">{womens.family}</p>
                         <p className="col">{womens.notes}</p> */}
-                        <Add />
+                        <Add 
+                        pic={womens.image_url}
+                        name={womens.name}
+                        price={womens.price}/>
                     </div>
                 </h1>
             ))

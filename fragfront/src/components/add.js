@@ -3,14 +3,29 @@ import "./add.css";
 
 class Add extends Component {
     constructor(props) {
-        super();
+        super(props);
     }
+
+handleAdd = ()=> {
+    console.log("added")
+    fetch("https://fragbackend.herokuapp.com/Mens/Cart",  {
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ perfume: "test1", status: true})
+        })
+            .then((res) => res.json())
+            .then((out) => console.log(out));
+}
+
 
     render() {
         return (
             <div className="forMore">
                 <div class="contain1">
-                    <button onClick={() => alert("You item has been added !")}> ADD </button>
+                    <button onClick={this.handleAdd}> ADD </button>
                 </div>
             </div>
         )

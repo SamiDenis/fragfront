@@ -24,6 +24,7 @@ class Cart extends Component {
         })
             .then((res) => res.json())
             .then((out) => this.setState({ perfume: out }));
+            
     };
 
     fragApp = (e) => {
@@ -93,6 +94,16 @@ class Cart extends Component {
                         <p className="added">Add To Basket</p>
                         <form>
                             <div>
+                            <div className="grid2">
+            {this.state.perfume.length !==0
+            ?this.state.perfume.map((womens) =>(
+                <p>
+                    {womens.perfume}
+                </p>
+                  
+            ))
+        : null}
+        </div>
                                 <button onClick={this.fragMens}>EDIT</button>
                                 <button onClick={this.fragMens}>DELETE</button>      
                                 </div>

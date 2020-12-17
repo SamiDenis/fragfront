@@ -1,0 +1,33 @@
+.newBackW{
+    background-color: black;
+}
+
+.titleW{
+    text-shadow: 4px 4px red;
+}
+
+.newWomens{
+    margin: 10px;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 4px 4px red;
+    color: white;
+}
+
+.newLinkW{
+    color:white;
+    margin: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 4px 4px red;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+form{
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 4px 4px red;
+    color: white;
+    padding: 150px;
+    font-size: 30px;
+}

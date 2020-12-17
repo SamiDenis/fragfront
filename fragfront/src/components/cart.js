@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 // import React from "react";
 import "./cart.css";
 import Footer from "./footer.js"
+
 
 class Cart extends Component {
     constructor(props) {
@@ -114,9 +116,11 @@ class Cart extends Component {
                                                 <p>{mens.name}</p>
                                                 <p>{mens.price}</p>
                                             </div>
-                                            <button onClick={this.fragUpdate}>EDIT</button>
+                                            {/* <button onClick="Men/Cart" className="editButton">EDIT</button> */}
+                                            {/* <Link to={`Mens/Cart/${mens._id}`} className="newButtonE">EDIT</Link> */}
+                                            <Link to={`Cart/${womens._id}`} className="newButtonE">EDIT</Link>
                                             <button onClick={() => this.fragDelete(womens._id)}>DELETE</button>
-                                            <button onClick={() => this.fragAdd(womens)}> NEW </button>
+                                            {/* <button onClick={() => this.fragAdd(womens)}> NEW </button> */}
                                         </p>
 
                                     ))

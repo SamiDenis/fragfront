@@ -24,6 +24,7 @@ let Womens = (props) => {
             </a>
 
         <img src="https://www.estorepower.com/estore/ehsence/store/images/banner2.jpg" className="pic" />
+        <a href="Womens/New" className="newB">NEW</a>
 
         <div className="grid2">
           {props.data.length !== 0

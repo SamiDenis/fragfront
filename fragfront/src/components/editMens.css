@@ -1,0 +1,34 @@
+.editBack{
+    background-color: black;
+}
+
+.editMens{
+    margin: 10px;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 4px 4px #A47234;
+    color: white;
+}
+
+.editTitle{
+    color: white;
+    text-shadow: 4px 4px #A47234;
+}
+
+.editLink{
+    color:white;
+    margin: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 4px 4px #A47234;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.formMen{
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 4px 4px #A47234;
+    color: white;
+    padding: 150px;
+    font-size: 30px;
+}

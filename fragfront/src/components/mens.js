@@ -30,6 +30,8 @@ class Mens extends Component {
             </a>
 
           <img src="https://cdn.shopify.com/s/files/1/1397/9545/collections/menbanner3_d41072cb-e054-40c8-96a6-ca20dafa898a.jpg?v=1475332146" className="pic" />
+
+          <a href="Mens/New" className="newButton">NEW</a>
           <div className="grid">
         
             {this.props.data.length !== 0

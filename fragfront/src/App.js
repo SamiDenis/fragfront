@@ -3,6 +3,10 @@ import Header from "./components/header";
 import Mens from "./components/mens";
 import Womens from "./components/womens";
 import Cart from "./components/cart";
+import NewMens from "./components/newMen";
+import NewWomens from "./components/newWomen";
+import EditMens from "./components/editMens";
+import EditWomens from "./components/editWomens";
 // import Footer from "./components/footer"
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import './App.css';
@@ -71,13 +75,17 @@ class App extends Component {
                 <Womens data={this.state.womensInfo} />
               </Route>
               <Route exact path="/Mens/Cart">
-                {/* {this.state.all ? ( */}
-                  <Cart 
-                  // data={this.state.cartInfo}
-                  // mens={this.state.mensInfo}
-                  // womens={this.state.womensInfo}
-                  // pullFrag={this.pullFrag}
-                  />
+                  <Cart />
+              </Route>
+              <Route exact path="/Mens/New">
+                <NewMens />
+              </Route>
+              <Route exact path="/Womens/New">
+                <NewWomens />
+              </Route>
+              <Route path="/Mens/Cart/:id" component={EditMens} />
+              <Route>
+                <EditWomens />
               </Route>
             </Switch>
           </BrowserRouter>

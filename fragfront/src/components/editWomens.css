@@ -1,0 +1,29 @@
+.editBackW{
+    background-color: black;
+}
+
+.editWomens{
+    margin: 10px;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 4px 4px #A47234;
+    color: white;
+}
+
+.editLinkW{
+    color:white;
+    margin: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 4px 4px #A47234;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.formWomen{
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 4px 4px #A47234;
+    color: white;
+    padding: 150px;
+    font-size: 30px;
+}

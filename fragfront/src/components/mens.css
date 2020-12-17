@@ -45,3 +45,17 @@ img{
     width: 250px;
     padding-top: 50px;
 }
+
+.newButton{
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px brown;
+    font-size: 16px;
+    border: 2px solid white;
+    padding: 5px;
+}
+
+.pic{
+    padding-bottom: 100px;
+}

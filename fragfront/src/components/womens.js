@@ -36,8 +36,7 @@ let Womens = (props) => {
                   <p className="col">{womens.brand}</p>
                   <p className="col">{womens.type}</p>
                   <p className="col">USD ${womens.price}</p>
-                  {/* <p className="col">{womens.family}</p>
-                        <p className="col">{womens.notes}</p> */}
+                  
                   <Add
                     pic={womens.image_url}
                     name={womens.name}
